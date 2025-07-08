@@ -10,10 +10,10 @@ def get_database_connection():
 
 #feature 1: Checkout Book 
 def checkout_book():
-    book_id = entry_book_id.get().strip()      # Get book ID from user input
-    branch_id = entry_branch_id.get().strip()  # Get branch ID from user input
-    card_no = entry_card_no.get().strip()      # Get card number from user input
-    due_date = entry_due_date.get().strip()   # Get due date from user input
+    book_id = entry_book_id.get().strip()      # get book ID from user input
+    branch_id = entry_branch_id.get().strip()  # gt branch ID from user input
+    card_no = entry_card_no.get().strip()      # get card number from user input
+    due_date = entry_due_date.get().strip()   # get due date from user input
 
     #validate inputs
     if not book_id or not branch_id or not card_no or not due_date:
@@ -54,7 +54,7 @@ def checkout_book():
         conn.close()
 
 
-#feature 2:add a borrower
+#add a borrower
 def add_borrower():
     name = entry_borrower_name.get()
     address = entry_borrower_address.get()
@@ -88,7 +88,7 @@ def add_borrower():
         conn.close()
 
 
-#feature 3: add a Book
+#add a Book
 def add_book():
     title = entry_new_book_title.get().strip()
     publisher_name = entry_publisher_name.get().strip()
@@ -138,7 +138,7 @@ def add_book():
     finally:
         conn.close()
 
-#feature 4: list out the loaned copies
+# list out the loaned copies
 def list_loaned_copies():
     title = entry_loaned_title.get().strip()  #strip the spaces from the input
 
@@ -177,7 +177,7 @@ def list_loaned_copies():
         conn.close()
 
 
-#feature 5: list out the late loans
+#lists out the late loans
 def list_late_loans():
     start_date = entry_start_date.get().strip()  #get start date from the GUI
     end_date = entry_end_date.get().strip()      # get end date from the GUI
@@ -218,7 +218,7 @@ def list_late_loans():
         conn.close()
 
 
-#feature 6a: borrowers with late fees
+#fborrowers with late fees
 def list_borrower_late_fees():
     borrower_id = entry_borrower_id.get().strip()             #cleans input
     borrower_name = entry_borrower_name_search.get().strip()  #  ^^^^^^^^
@@ -267,7 +267,7 @@ def list_borrower_late_fees():
         conn.close()
 
 
-#feature 6b: books w/ late fees
+#books w/ late fees
 def list_books_with_late_fees():
     borrower_id = entry_borrower_id_for_books.get().strip()  #clean input
     book_title = entry_book_title_search.get().strip()       # ^^^^
